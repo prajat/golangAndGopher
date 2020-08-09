@@ -3,10 +3,20 @@ package main
 import "fmt"
 
 func main() {
+
+	// variables
+
 	//var card string = "Ace of spades"
-	card := newCard()
+	// card := newCard()
 	//card = "five of hearts"
-	fmt.Println(card)
+	// fmt.Println(card)
+
+	//arrays and slices
+
+	cards := []string{"ace of diamonds", newCard()}
+	cards = append(cards, "three of spades")
+	fmt.Println(cards)
+
 }
 
 func newCard() string {
