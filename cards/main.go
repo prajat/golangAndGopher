@@ -1,15 +1,15 @@
 package main
 
 func main() {
-	cards := deck{"ace of diamonds", newCard()}
-	cards = append(cards, "three of spades")
+	cards := newDeck()
+
 	cards.print()
 
 }
 
-func newCard() string {
-	return "four of hearts"
-}
+// func newCard() string {
+// 	return "four of hearts"
+// }
 
 // variables	//var card string = "Ace of spades"
 // card := newCard()
