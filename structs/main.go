@@ -9,7 +9,8 @@ type contactInfo struct {
 type person struct {
 	firstName string
 	lastName  string
-	contact   contactInfo
+	//contact   contactInfo   way to use contact var name but not necessary
+	contactInfo
 }
 
 func main() {
@@ -27,11 +28,22 @@ func main() {
 	jim := person{
 		firstName: "Jim",
 		lastName:  "party",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "jim@gmail.com",
 			zipCode: 123456,
 		},
 	}
-	fmt.Printf("%+v", jim)
 
+	jimPointer := &jim
+	jimPointer.updateName("rajat")
+	jim.print()
+
+}
+
+func (p person) print() { //reciever function for structs
+	fmt.Printf("%+v", p)
+}
+
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
