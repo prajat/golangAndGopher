@@ -34,8 +34,9 @@ func main() {
 		},
 	}
 
-	jimPointer := &jim
-	jimPointer.updateName("rajat")
+	// jimPointer := &jim
+	// jimPointer.updateName("rajat")
+	jim.updateName("jimmy") //pointer shortcut in go, not required upper classic 2 statements for call by references
 	jim.print()
 
 }
